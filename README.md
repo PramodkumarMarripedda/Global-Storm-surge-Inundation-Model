@@ -4,7 +4,7 @@
 
 Storm surge, triggered by intense low-pressure systems such as cyclones, causes sea levels to rise and pushes waves inland, leading to widespread coastal inundation.
 
-To model this hazard more accurately, we developed an advanced in-house inundation model that integrates global high-resolution flood heights from GTSR (GTSM + ERA5) and the latest Delta DTM (2024) at 30 m resolution, along with LiDAR-derived DEM at 0.5 m resolution for Hong Kong.
+To model this hazard more accurately, developed an advanced in-house inundation model that integrates global high-resolution flood heights from GTSR (GTSM + ERA5) and the latest Delta DTM (2024) at 30 m resolution, along with LiDAR-derived DEM at 0.5 m resolution for Hong Kong.
 
 The model incorporates projected sea level rise into probabilistic wave heights for RP100, assessed across SSP1-2.6, SSP2-4.5, and SSP5-8.5 scenarios for the years 2030, 2050, and 2100.
 
