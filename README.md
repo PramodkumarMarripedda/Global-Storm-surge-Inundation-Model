@@ -1,14 +1,15 @@
-# Storm Surge Inundation mapping
+# Storm Surge Inundation Explorer
 
 ## Overview
 
 Storm surge, triggered by intense low-pressure systems such as cyclones, causes sea levels to rise and pushes waves inland, leading to widespread coastal inundation.
 
-To model this hazard more accurately, we developed an advanced in-house inundation model that integrates global high-resolution flood heights from GTSR (GTSM + ERA5) and the latest Delta DTM at 30 m resolution, along with LiDAR-derived DEM at 0.5 m resolution for Hong Kong.
+To model this hazard more accurately, we developed an advanced in-house inundation model that integrates global high-resolution flood heights from GTSR (GTSM + ERA5) and the latest Delta DTM (2024) at 30 m resolution, along with LiDAR-derived DEM at 0.5 m resolution for Hong Kong.
 
 The model incorporates projected sea level rise into probabilistic wave heights for RP100, assessed across SSP1-2.6, SSP2-4.5, and SSP5-8.5 scenarios for the years 2030, 2050, and 2100.
 
  algorithm improves accuracy by mapping only hydrologically connected inundation zones, eliminating isolated flood pockets. Validation against Climate Central and other open-source datasets confirms the model’s spatial reliability and precision.
+ 
 
 ---
 
@@ -17,7 +18,8 @@ The model incorporates projected sea level rise into probabilistic wave heights 
 - Integration of GTSR (GTSM + ERA5) global flood heights,RP100 extreme sea level data from Co-DEC ECMWF 
 - Climate scenario assessment for SSP1-2.6, SSP2-4.5, and SSP5-8.5
 - Future year mapping for 2030, 2050, and 2100
-- Use of Recent Coastel Delta DTM(2024)  at 30 m resolution
+- Integration of GTSR (GTSM + ERA5) global flood heights
+- Use of Delta DTM 2024 at 30 m resolution
 - Local LiDAR DEM support at 0.5 m resolution for Hong Kong
 - Hydrologically connected flood masking to remove isolated pockets
 - Validation with Climate Central and open-source coastal flood datasets
@@ -33,7 +35,7 @@ This project maps that process by combining:
 - extreme total water levels from ECMWF
 - projected sea level rise and wave height influences
 - high-resolution coastal elevation data
-- connectivity-based inundation filtering
+- connectivity-based inundation filtering using simple bath-tub approach
 
 ---
 
