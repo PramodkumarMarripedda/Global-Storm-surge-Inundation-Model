@@ -1,10 +1,10 @@
-# Storm Surge Inundation Explorer
+# Storm Surge Inundation mapping
 
 ## Overview
 
 Storm surge, triggered by intense low-pressure systems such as cyclones, causes sea levels to rise and pushes waves inland, leading to widespread coastal inundation.
 
-To model this hazard more accurately, we developed an advanced in-house inundation model that integrates global high-resolution flood heights from GTSR (GTSM + ERA5) and the latest Delta DTM (2024) at 30 m resolution, along with LiDAR-derived DEM at 0.5 m resolution for Hong Kong.
+To model this hazard more accurately, we developed an advanced in-house inundation model that integrates global high-resolution flood heights from GTSR (GTSM + ERA5) and the latest Delta DTM at 30 m resolution, along with LiDAR-derived DEM at 0.5 m resolution for Hong Kong.
 
 The model incorporates projected sea level rise into probabilistic wave heights for RP100, assessed across SSP1-2.6, SSP2-4.5, and SSP5-8.5 scenarios for the years 2030, 2050, and 2100.
 
@@ -14,11 +14,10 @@ The model incorporates projected sea level rise into probabilistic wave heights 
 
 ## Key Features
 
-- RP100 extreme water level modelling using ECMWF total water level data
+- Integration of GTSR (GTSM + ERA5) global flood heights,RP100 extreme sea level data from Co-DEC ECMWF 
 - Climate scenario assessment for SSP1-2.6, SSP2-4.5, and SSP5-8.5
 - Future year mapping for 2030, 2050, and 2100
-- Integration of GTSR (GTSM + ERA5) global flood heights
-- Use of Delta DTM 2024 at 30 m resolution
+- Use of Recent Coastel Delta DTM(2024)  at 30 m resolution
 - Local LiDAR DEM support at 0.5 m resolution for Hong Kong
 - Hydrologically connected flood masking to remove isolated pockets
 - Validation with Climate Central and open-source coastal flood datasets
@@ -42,18 +41,16 @@ This project maps that process by combining:
 
 ### Data Sources
 
-- **ECMWF total water level** for RP100 coastal flooding
-- **GTSR / GTSM + ERA5** high-resolution global flood height fields
+- **ECMWF total water level** for RP100 coastal flooding for all SSP senarios
 - **Delta DTM 2024** at 30 m resolution
 - **LiDAR-derived DEM** at 0.5 m resolution (Hong Kong)
 
 ### Model Workflow
 
-1. Compile ECMWF total water level and climate scenario water projections.
-2. Apply RP100 threshold heights to coastal DEM surfaces.
-3. Map inundation zones where terrain elevation is below the total water surface.
-4. Enforce hydrologic connectivity to retain only flood areas linked to the coastline.
-5. Generate final inundation maps for each scenario and year.
+1. RP 100 YR ECMWF Extreme sea levels (Storm Surge + Sea Level Rise Change + Heighst Astronomical Tide)
+2. Map inundation zones where terrain elevation is below the Extreme sea level .
+3. Enforce hydrologic connectivity to retain only flood areas linked to the coastline.
+4. Generate final inundation maps for each scenario and year.
 
 ### Scenario Coverage
 
@@ -87,21 +84,8 @@ Validated against:
 - Climate Central coastal flood datasets
 - other public coastal inundation products
 
-The focus is on spatial reliability and precision for RP100 storm surge hazards under future climate scenarios.
 
----
 
-## Repository Structure
-
-- `Download_data/` — raw input data references and source notes
-- `Sample_Results/` — project output examples and map snapshots
-- `Scripts/` — analysis notebooks and processing scripts
-
----
-
-## Notes
-
-This README is designed as a clear technical overview with a simple structure. For diagram visuals, add project-specific figure files to `Sample_Results/` and link them here as needed.
 
    
 
