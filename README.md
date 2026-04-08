@@ -19,7 +19,7 @@ The model incorporates projected sea level rise into probabilistic wave heights 
 - Climate scenario assessment for SSP1-2.6, SSP2-4.5, and SSP5-8.5
 - Future year mapping for 2030, 2050, and 2100
 - Integration of GTSR (GTSM + ERA5) global flood heights
-- Use of Delta DTM 2024 at 30 m resolution
+- Use of Delta DTM  at 30 m resolution
 - Local LiDAR DEM support at 0.5 m resolution for Hong Kong
 - Hydrologically connected flood masking to remove isolated pockets
 - Validation with Climate Central and open-source coastal flood datasets
@@ -35,7 +35,7 @@ This project maps that process by combining:
 - extreme total water levels from ECMWF
 - projected sea level rise and wave height influences
 - high-resolution coastal elevation data
-- connectivity-based inundation filtering
+- connectivity-based inundation filtering using simple bath-tub approach
 
 ---
 
