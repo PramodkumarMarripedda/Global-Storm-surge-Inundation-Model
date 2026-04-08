@@ -1,4 +1,4 @@
-# Storm Surge Inundation Explorer
+<img width="1417" height="539" alt="image" src="https://github.com/user-attachments/assets/74588faa-cfff-44e4-831b-81f1a6609f22" /># Storm Surge Inundation 
 
 ## Overview
 
@@ -9,6 +9,7 @@ To model this hazard more accurately, we developed an advanced in-house inundati
 The model incorporates projected sea level rise into probabilistic wave heights for RP100, assessed across SSP1-2.6, SSP2-4.5, and SSP5-8.5 scenarios for the years 2030, 2050, and 2100.
 
  algorithm improves accuracy by mapping only hydrologically connected inundation zones, eliminating isolated flood pockets. Validation against Climate Central and other open-source datasets confirms the model’s spatial reliability and precision.
+ 
 
 ---
 
