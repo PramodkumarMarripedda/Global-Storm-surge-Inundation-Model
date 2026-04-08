@@ -121,10 +121,8 @@ Model outputs are validated with open-source references such as Climate Central 
 
 - `Download_data/` — raw input data references and notes
 - `Sample_Results/` — example output maps and summaries
-- `Scripts/` — analysis notebooks and processing code
+- `Scripts/` — Inundation notebook file
 
----
+   
 
-## 💡 Notes
 
-This README is designed in an LLM-notebook style with simplified diagrams and conceptual graphics. Replace the ASCII illustrations with real figures in future versions if desired.
